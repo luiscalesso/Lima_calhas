@@ -21,50 +21,36 @@ body {
 /* Header */
 header {
     display: flex;
-    align-items: center; /* Alinha verticalmente os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    border-bottom: 2px solid #fff;
-}
-
-/* Estilos para o header */
-header {
-    display: flex;
-    align-items: center; /* Alinha o logo e o nome no mesmo nível vertical */
-    justify-content: space-between; /* Garante que o nome e a logo fiquem separados */
-    background-color: #333; /* Fundo escuro */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
     padding: 20px;
 }
 
+/* Ajuste para o logo e nome da empresa no mobile */
 header p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2em; /* Ajuste o tamanho do nome para ficar proporcional */
+    font-size: 2em;
     font-weight: 700;
     color: #838383;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
-    letter-spacing: -1px; /* Ajuste do espaçamento entre as letras */
+    letter-spacing: -1px;
 }
 
 header .logo {
-    max-height: 200px; /* Ajuste o tamanho da logo para que não fique pequena */
+    max-height: 200px;
     height: auto;
-    margin-left: 20px; /* Espaço entre a logo e o nome */
+    margin-left: 20px;
 }
 
 /* Se você usar uma imagem para a logo */
 header .logo img {
-    height: 100%; /* Faz a logo ocupar a altura do container */
+    height: 100%;
     width: auto;
 }
 
-
-
+/* Botão de chamada */
 .cta-button {
     background-color: #25d366;
     color: #fff;
@@ -240,6 +226,7 @@ footer {
         background-image: url('images/imagem1.jpg');
     }
 }
+
 /* Estilo para dispositivos móveis */
 @media screen and (max-width: 768px) {
     body {
@@ -247,12 +234,77 @@ footer {
         margin: 10px;
     }
 
-    .header {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 15px;
         text-align: center;
     }
 
-    .container {
-        display: block;
+    header .logo {
+        max-height: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    /* Ajuste na galeria */
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .photo-item {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .photo-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Formulário de Contato */
+    #contact {
+        padding: 20px;
+    }
+
+    #contact input, #contact select, #contact textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    #contact button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    /* Ícone do WhatsApp */
+    .whatsapp-icon {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+    }
+
+    .whatsapp-icon img {
+        width: 40px;
+        height: 40px;
     }
 }
