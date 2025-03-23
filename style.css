@@ -1,0 +1,258 @@
+/* Resetando o estilo padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('images/imagem1.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: slide 30s infinite;
+    padding-top: 80px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #fff;
+}
+
+/* Estilos para o header */
+header {
+    display: flex;
+    align-items: center; /* Alinha o logo e o nome no mesmo nível vertical */
+    justify-content: space-between; /* Garante que o nome e a logo fiquem separados */
+    background-color: #333; /* Fundo escuro */
+    padding: 20px;
+}
+
+header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em; /* Ajuste o tamanho do nome para ficar proporcional */
+    font-weight: 700;
+    color: #838383;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    letter-spacing: -1px; /* Ajuste do espaçamento entre as letras */
+}
+
+header .logo {
+    max-height: 200px; /* Ajuste o tamanho da logo para que não fique pequena */
+    height: auto;
+    margin-left: 20px; /* Espaço entre a logo e o nome */
+}
+
+/* Se você usar uma imagem para a logo */
+header .logo img {
+    height: 100%; /* Faz a logo ocupar a altura do container */
+    width: auto;
+}
+
+
+
+.cta-button {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Seção sobre */
+#about {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    margin: 20px 0;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Seção Nossos Projetos */
+#portfolio {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo para a galeria de projetos */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cada item da foto */
+.photo-item {
+    width: 30%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover para aumentar a imagem */
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem dentro do item */
+.photo-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sobreposição (overlay) da descrição */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.overlay .description {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Mostrar a descrição ao clicar (quando a classe 'open' for adicionada) */
+.photo-item.open .overlay {
+    opacity: 1;
+}
+
+/* Depoimentos */
+#testimonials {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.testimonial {
+    margin: 20px;
+    font-style: italic;
+}
+
+/* Formulário de Contato */
+#contact {
+    padding: 40px;
+    background-color: #e3e3e3;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#contact label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contact input, #contact select, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animação de fundo */
+@keyframes slide {
+    0% {
+        background-image: url('images/imagem1.jpg');
+    }
+    25% {
+        background-image: url('images/imagem2.jpg');
+    }
+    50% {
+        background-image: url('images/imagem3.jpg');
+    }
+    75% {
+        background-image: url('images/imagem4.jpg');
+    }
+    100% {
+        background-image: url('images/imagem1.jpg');
+    }
+}
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+    }
+}
